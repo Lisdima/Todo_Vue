@@ -1,0 +1,117 @@
+@font-face
+    font-family: "Gilroy bold"
+    src: url("../fonts/gilroy-bold.ttf")
+    
+.strike
+    text-decoration: line-through
+
+body
+    background-color: #a7a4a4
+    margin: 0
+.app
+    width: 900px
+    display: block
+    text-align: center
+    margin: 80px auto 0
+    padding: 0 20px
+
+.ctrl-form
+    display: flex
+    justify-content: space-around
+
+.enter-task
+    max-width: 600px
+
+    .new-task
+        width: 100%
+        font-size: 25px
+        border: 3px solid #433785
+        color: #2e45ad
+        padding: 10px
+        transition: border-radius 0.4s linear, box-shadow 0.4s linear
+
+    .new-task:hover
+        box-shadow: -5px 5px 5px #302e2e
+    .new-task:focus
+        outline: none
+        border-radius: 20px
+
+.main-btn
+    position: relative
+    margin-left: 60px
+
+    .ctrl-btn
+        font-family: "Gilroy bold"
+        font-size: 25px
+        padding: 10px 15px
+        background-color: #fffefe
+        border: 3px solid black
+        transition: border-radius 0.3s linear
+        opacity: 0.6
+        outline: none
+    .ctrl-btn:hover
+        cursor: pointer
+        border: 3px solid #123123
+        border-radius: 20px
+        opacity: 1
+    .ctrl-btn:focus
+        outline: none
+    .ctrl-btn:active
+        background-color: #bd5f5f
+
+ul
+    margin-top: 60px
+
+.item
+    display: flex
+    justify-content: space-between
+    font-size: 28px
+    margin: 15px 0
+
+    span
+        font-family: 'Courier Prime', monospace;
+        display: inline-block
+        max-width: 550px
+        width: 100%
+        text-transform: uppercase
+        word-break: break-all;
+
+.control-task
+    margin: auto 0
+
+    .btn-check
+        font-family: "Gilroy bold"
+        font-size: 20px
+        padding: 6px 10px
+        border: 2px solid #000000
+
+        background-color: #73745e 
+        opacity: 0.8
+        transition: border-radius 0.3s linear
+    .btn-check:hover
+        opacity: 1
+        cursor: pointer
+        border-radius: 10px
+    .btn-check:focus
+        outline: none
+    .btn-check:active
+        background-color: #393a31 
+    
+
+    .btn-remove
+        font-family: "Gilroy bold"
+        font-size: 20px
+        padding: 6px 10px
+        border: 2px solid #000000
+               
+        background-color: #73745e 
+        opacity: 0.8
+        transition: border-radius 0.3s linear
+    .btn-remove:focus
+        outline: none
+    .btn-remove:hover
+        opacity: 1
+        cursor: pointer
+        border-radius: 10px
+    .btn-remove:active
+        background-color: #393a31 

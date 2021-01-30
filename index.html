@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap"
+      rel="stylesheet"
+    />
+    <title>Vue_toDo</title>
+  </head>
+  <body>
+    <div class="app" id="app">
+      <div class="ctrl-form">
+        <div class="enter-task">
+          <input
+            class="new-task"
+            type="text"
+            v-on:keyup.enter="addTask"
+            v-model="newTask"
+            placeholder="Введите задачу"
+          />
+        </div>
+        <div class="main-btn">
+          <button class="ctrl-btn" v-on:click="addTask">Add task</button>
+          <button class="ctrl-btn" v-on:click="removeTasks">
+            Remove tasks
+          </button>
+        </div>
+      </div>
+      <ul>
+        <li class="item" v-for="task in tasks">
+          <div class="task">
+            <span v-bind:class="{'strike': task.isCompleted}"
+              >{{task.text}}</span
+            >
+          </div>
+          <div class="control-task">
+            <button
+              class="btn-check"
+              v-on:click="task.isCompleted = !task.isCompleted"
+            >
+              Performed
+            </button>
+            <button class="btn-remove" v-on:click="removeTask(task.text)">
+              X
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <script src="assets/js/vue.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
